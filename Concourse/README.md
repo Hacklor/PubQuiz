@@ -2,9 +2,11 @@
 
 
 
----gettiup Concourse.ci ---
+---getting up Concourse.ci ---
 
 install docker
+
+then download docker-compose file to get concourse nodes up and running
 
 wget https://concourse-ci.org/docker-compose.yml
 
@@ -12,7 +14,7 @@ docker-compose up -d
 
 now hit the http://localhost:8080 in your browser
 
-Concourse ci is up
+check Concourse ci is up
 
 now install fly as per your system available on ui
 
@@ -21,7 +23,7 @@ now install fly as per your system available on ui
 login and get authenticated with fly
 
 fly -t main -c http://localhost:8080
-click on the given link
+click on the given link for token authenticaation
 
 now all set up
 
