@@ -1,0 +1,26 @@
+jobs:
+- name: build-docker-image
+  public: true
+  serial: true
+  plan:
+  - get: docker-image-from-git
+    trigger: true
+  - put: docker-image-to-docker-hub
+    params:
+      build: docker-image-from-git/Concourse
+
+resources:
+- name: docker-image-from-git
+  type: git
+  source:
+    uri: https://github.com/dharmendrakariya/PubQuiz.git
+    branch: master
+    
+
+- name: docker-image-to-docker-hub
+  type: docker-image
+  source:
+    email: dharamendra.kariya@gmail.com
+    username: dharmendrakariya
+    password: Loveumom9$#
+    repository: dharmendrakariya/concoursestuff
