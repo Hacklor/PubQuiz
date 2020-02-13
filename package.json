@@ -8,6 +8,9 @@
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
   },
+  "resolutions": {
+    "serialize-javascript": "^2.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
